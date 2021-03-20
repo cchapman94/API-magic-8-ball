@@ -4,15 +4,39 @@
 		<meta charset= "UTF-8">
 		<meta name= "viewport" content= "width=device-width, initial-scale=1.0">
 		<link rel= "stylesheet" href= "style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 		<title>Magic 8 Ball</title>
 
 	</head>
 
 	<body>
 		<div class= "main">
-			<h2> Magic 8 Ball </h2>
+			<div class= "stars"></div>
+			<div class= "sparkle"></div>
+			<div class= "clouds"></div>
+
+			<h2> Magic 8 Ball Game</h2>
+
+			<div class= "interaction-container">
+				<iput id= "input" class= "input" type= "text" onkeypress= "handleKeyEnter(event)" value= "" required />
+				<span class= "input-bar"></span>
+				<label>Type Your Question</label>
+				<p id= "error" class= "error"></p>
+			</div>
+
+			<button id= "button" type= "submit" class= "button">Shake</button>
+
+			<div id= "ball" class= "ball">
+				<div class= "ball-response">
+					<div class= "ball-triangle"></div>
+					<div id= "answer" class= "ball-answer"></div>
+				</div>
+			</div>
+
 		</div>
 
 	</body>
+
+	<script src= "script.js"></script>
 
 </html>
