@@ -17,6 +17,13 @@ body {
 
 }
 
+h2 {
+	font-size: 32px;
+	font-weight: 700;
+	padding-bottom: 80px;
+
+}
+
 .interaction-container {
 	position: relative;
 	margin-bottom: 30px;
@@ -40,6 +47,10 @@ body {
 .input ~ label {
 	position: absolute;
 	color: white;
+	font-size: 1.4rem;
+	font-weight: 700;
+	top: -2.2rem;
+	left: 2rem;
 }
 
 .input-bar {
@@ -65,6 +76,15 @@ body {
 .input[type='text'] {
 	background: transparent;
 	border: none;
+}
+
+.button {
+	border: 0;
+	border-radius: 8px;
+	font-size: 1rem;
+	text-transform: uppercase;
+	background: white;
+	color: black;
 }
 
 /*
