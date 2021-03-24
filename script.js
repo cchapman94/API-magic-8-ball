@@ -1,14 +1,24 @@
 //API 
 const API_ENDPOINT = 'https://yesno.wtf/api';
+ 
+
+ //Output API's response
+ /*
+ const showAnswer = answer => {
+ 	document.querySelector('#answer').innerHTML = '<p>${answer}</p>';
+ };
+ */
+
 
 //fetchAnswer function and call API 
 const fetchAnswer = () => {
 	fetch(API_ENDPOINT)
-		.then(response => response.json())
-		.then(data => console.log(data));
+		.then(data => data.json())
+		.then(data => console.log(data.answer));
 };
 
 fetchAnswer();
+
 
 
 /* 
@@ -18,7 +28,7 @@ fetch('http://example.com/movies.json')
  */
 
 
- //Output API's response
+
 
 //Attach fetchAnswer to event listener
 
