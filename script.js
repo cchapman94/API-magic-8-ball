@@ -2,22 +2,21 @@
 const API_ENDPOINT = 'https://yesno.wtf/api';
  
 
- //Output API's response
- /*
- const showAnswer = answer => {
- 	document.querySelector('#answer').innerHTML = '<p>${answer}</p>';
- };
- */
+//Output API's response
+const showAnswer = answer => {
+	document.querySelector('#answer').innerHTML = `<p>${answer}</p>`;
+}
 
 
 //fetchAnswer function and call API 
 const fetchAnswer = () => {
 	fetch(API_ENDPOINT)
 		.then(data => data.json())
-		.then(data => console.log(data.answer));
+		.then(data => showAnswer(data.answer));
 };
 
 fetchAnswer();
+//showAnswer();
 
 
 
