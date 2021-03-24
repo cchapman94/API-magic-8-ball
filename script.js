@@ -3,6 +3,7 @@ const ballSelector = document.querySelector('#ball');
 const buttonSelector = document.querySelector('#button');
 const inputSelector = document.querySelector('#input');
 const answerSelector = document.querySelector('#answer');
+const errorSelector = document.querySelector('#error');
 
 //API 
 const API_ENDPOINT = 'https://yesno.wtf/api';
@@ -60,13 +61,23 @@ const setIsRequestInProgress = (value) => {
 	isRequestInProgress = value;
 };
 
+//Add loading/error states
+const showError = () => {
+	errorSelector.innerHTML = "You need to type your question";
+
+	setTimeout(() => {
+		errorSelector.innerHTML = '';
+	}, 3000);
+
+};
+
 const getAnswer = () => {
 	if (isRequestInProgress) {
 		return;
 	}
 
 	if (!inputSelector.value) {
-		return
+		return showError();
 	}
 
 	fetchAnswer();
@@ -83,4 +94,3 @@ const handleKeyEnter = (e) => {
 buttonSelector.addEventListener('click', getAnswer); 
 
 
-//Add loading/error states
