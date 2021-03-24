@@ -15,10 +15,6 @@ const fetchAnswer = () => {
 		.then(data => showAnswer(data.answer));
 };
 
-fetchAnswer();
-//showAnswer();
-
-
 
 /* 
 fetch('http://example.com/movies.json')
@@ -27,9 +23,20 @@ fetch('http://example.com/movies.json')
  */
 
 
-
-
 //Attach fetchAnswer to event listener
+
+const handleKeyEnter = (e) => {
+	//console.log('handleKeyEnter', {e});
+	if (e.keyCode === 13) {
+		fetchAnswer();
+	}	 
+
+};
+
+document.querySelector('#button').addEventListener('click', () => {
+	//console.log('Clicked');
+	fetchAnswer();
+});
 
 //Clear output after 3 seconds
 
