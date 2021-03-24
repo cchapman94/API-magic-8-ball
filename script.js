@@ -10,6 +10,7 @@ const showAnswer = answer => {
 	setTimeout(() => {
 		document.querySelector('#answer').innerHTML = `<p>${answer}</p>`;
 		ballSelector.classList.remove('shake-ball');
+		cleanupResponse();
 
 	}, 1000);
 	
@@ -40,5 +41,14 @@ document.querySelector('#button').addEventListener('click', () => {
 });
 
 //Clear output after 3 seconds
+const cleanupResponse = () => {
+	setTimeout(() => {
+		document.querySelector('#answer').innerHTML = '';
+		document.querySelector('#input').value = '';
+
+	}, 3000);
+	
+
+};
 
 //Add loading/error states
