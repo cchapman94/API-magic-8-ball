@@ -1,15 +1,23 @@
+//Selectors
+const ballSelector = document.querySelector('#ball');
+
 //API 
 const API_ENDPOINT = 'https://yesno.wtf/api';
  
 
 //Output API's response
 const showAnswer = answer => {
-	document.querySelector('#answer').innerHTML = `<p>${answer}</p>`;
-}
+	setTimeout(() => {
+		document.querySelector('#answer').innerHTML = `<p>${answer}</p>`;
+		ballSelector.classList.remove('shake-ball');
+
+	}, 1000);
+	
+};
 
 //fetchAnswer function and call API 
 const fetchAnswer = () => {
-	//document.querySelector('#ball').classList.add('shake-ball')
+	ballSelector.classList.add('shake-ball');
 
 	fetch(API_ENDPOINT)
 		.then(data => data.json())
