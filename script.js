@@ -7,24 +7,17 @@ const showAnswer = answer => {
 	document.querySelector('#answer').innerHTML = `<p>${answer}</p>`;
 }
 
-
 //fetchAnswer function and call API 
 const fetchAnswer = () => {
+	//document.querySelector('#ball').classList.add('shake-ball')
+
 	fetch(API_ENDPOINT)
 		.then(data => data.json())
 		.then(data => showAnswer(data.answer));
 };
 
 
-/* 
-fetch('http://example.com/movies.json')
-  .then(response => response.json())
-  .then(data => console.log(data));
- */
-
-
 //Attach fetchAnswer to event listener
-
 const handleKeyEnter = (e) => {
 	//console.log('handleKeyEnter', {e});
 	if (e.keyCode === 13) {
