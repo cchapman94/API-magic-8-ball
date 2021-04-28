@@ -36,7 +36,7 @@ h2 {
 	padding: 10px 10px 10px 0px;
 	border: none;
 	border-bottom: 1px solid #757575;
-	color: white;
+	color: black;
 
 }
 
@@ -61,7 +61,7 @@ h2 {
 	height: 2px;
 	bottom: 1px;
 	position: absolute;
-	background: white;
+	background: black;
 	/* 
 	box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #3f04ca, 
 		0 0 35px #3f04ca, 0 0 40 #3f04ca, 0 0 50px #3f04ca, 0 0 75 #3f04ca;
@@ -85,6 +85,7 @@ h2 {
 	text-transform: uppercase;
 	background: white;
 	color: black;
+	margin-bottom: 20px; ;
 }
 
 /*
@@ -103,7 +104,7 @@ h2 {
 
 .error {
 	position: absolute;
-	color: white;
+	color: black;
 	margin: 5px 13px;
 }
 
